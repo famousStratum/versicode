@@ -5,9 +5,10 @@
   --color-text:     #1a1a1a;
   --color-muted:    #6b7280;
   --color-border:   #e5e7eb;
-  --color-accent:   #2563eb;
+  --color-accent:   #ff4500;
 
   --font-sans:      system-ui, sans-serif;
+  --font-serif:     ui-serif, Georgia, serif;
   --font-mono:      ui-monospace, monospace;
 
   --width-content:  680px;
@@ -31,6 +32,9 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   padding: var(--spacing);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -56,9 +60,13 @@ ul {
 header, main, footer {
   max-width: var(--width-content);
   margin: 0 auto;
+  width: 100%;
 }
 
 header {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-bg);
   padding-block: var(--spacing);
   border-bottom: 1px solid var(--color-border);
   margin-bottom: calc(var(--spacing) * 2);
@@ -67,7 +75,7 @@ header {
 footer {
   padding-block: var(--spacing);
   border-top: 1px solid var(--color-border);
-  margin-top: calc(var(--spacing) * 3);
+  margin-top: auto;
   color: var(--color-muted);
   font-size: 0.875rem;
 }
@@ -185,4 +193,60 @@ p {
 .links ul {
   display: flex;
   gap: 1rem;
+}
+
+/* ── Footer versicode ───────────────────────────────────── */
+
+.om-symbol {
+  cursor: pointer;
+    color: var(--color-text);
+    display: inline-block;
+    position: relative;
+    transition: all 1s ease;
+}
+
+.om-symbol:hover {
+    text-decoration: none;
+    color: #222222;
+}
+
+.versicode-container:has(.om-symbol:hover) .versicode-text::after {
+    opacity: 0.4;
+}
+
+.versicode-container:has(.om-symbol:active) .versicode-text::after {
+    animation: dropshadow 1s ease forwards;
+}
+
+.versicode-text {
+    color: var(--color-text);
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+    transition: all 1s ease;
+}
+
+.versicode-text:hover {
+    color: #3a3a3a;
+}
+
+.versicode-text::after {
+    content: 'VERSICODE';
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    transform-origin: bottom left;
+    filter: blur(0.4px);
+    transform: skewX(0deg) scaleY(1.2);
+    transition: opacity 1s ease;
+}
+
+@keyframes dropshadow {
+    100% {
+        filter: blur(1px);
+        opacity: 0.2;
+        transform: skewX(45deg) scaleY(1.2);
+    }
 }
