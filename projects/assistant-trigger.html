@@ -10,10 +10,10 @@
 
 <body>
 
-    <header>
-        <nav>
-            <a href="/">
-                <h1>VERSICODE</h1>
+    <header role="banner">
+        <nav role="navigation" aria-label="Main site navigation">
+            <a href="/" class="brand">
+                versicode
             </a>
             <a href="mailto:info@versicode.com">Contact</a>
         </nav>
@@ -39,9 +39,9 @@
             <section class="tech-stack">
                 <h2>Tech Stack</h2>
                 <ul>
-                    <li>Kotlin</li>
-                    <li>Android SDK</li>
-                    <li>Gradle</li>
+                    <li data-tech="kotlin">Kotlin</li>
+                    <li data-tech="android-sdk">Android SDK</li>
+                    <li data-tech="no-ui">No UI</li>
                 </ul>
             </section>
 
@@ -56,10 +56,16 @@
         </article>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <p class="versicode-container">
-            <span class="versicode-text">VERSICODE</span>, code emanating through an
-            <span class="om-symbol">ॐ</span>
+            <span class="versicode-text">
+                <span class="shadow-layer layer1">versicode</span>
+                <span class="shadow-layer layer2">versicode</span>
+                <span class="shadow-layer layer3">versicode</span>
+                <span class="shadow-layer layer4">versicode</span>
+                versicode
+            </span>, code emanating through an
+            <span class="om-symbol" id="om-trigger" aria-label="Trigger VERSICODE effect">ॐ</span>
         </p>
     </footer>
 
