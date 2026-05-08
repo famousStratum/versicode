@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Versicode — Versicode</title>
+    <title>Haritam — Versicode</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -12,7 +12,9 @@
 
     <header role="banner">
         <nav role="navigation" aria-label="Main site navigation">
-            <span class="brand-code">&lt;a href="/" class="brand"&gt;versicode<span class="text-cursor">|</span>&lt;/a&gt;</span>
+            <a href="/" class="brand">
+                versicode
+            </a>
             <a href="mailto:info@versicode.com">contact</a>
         </nav>
     </header>
@@ -20,34 +22,47 @@
     <main>
         <article>
 
-            <h1>versicode</h1>
-
+            <h1>Haritam</h1>
             <p>
-                One project to role them all.
-                Welcome to the home of the Famous Stratum!
+                A web app for tracking and visualising outdoor activities. Import runs, hikes, and
+                rides from GPX files or connect directly via Strava. Activities are rendered as
+                interactive maps with elevation profiles and split breakdowns, and can be organised
+                with custom routes and colour-coded tags.
             </p>
 
-            <section class="screenshots">
-                <div class="iframe-preview">
-                    <iframe src="/" title="Versicode homepage preview" scrolling="no" tabindex="-1"></iframe>
-                    <a class="iframe-overlay" href="/" aria-label="Visit Versicode homepage"></a>
-                </div>
-            </section>
+            <!--<section class="screenshots">
+                <img src="../assets/haritam/screenshot-1.png" alt="Haritam activity map view">
+                <img src="../assets/haritam/screenshot-2.png" alt="Haritam activity list">
+            </section>-->
 
             <section class="tech-stack">
+
                 <h2>Tech Stack</h2>
+
                 <ul class="tech-category">
-                    <li data-tech="html">HTML</li>
+                    <li data-tech="nextjs">Next.js</li>
+                    <li data-tech="typescript">TypeScript</li>
+                    <li data-tech="react">React</li>
                 </ul>
+
                 <ul class="tech-category">
-                    <li data-tech="css">CSS</li>
+                    <li data-tech="tailwind">Tailwind CSS</li>
+                    <li data-tech="maplibre">MapLibre GL</li>
+                    <li data-tech="d3">D3</li>
                 </ul>
+
+                <ul class="tech-category">
+                    <li data-tech="prisma">Prisma</li>
+                    <li data-tech="nextauth">NextAuth</li>
+                    <li data-tech="resend">Resend</li>
+                </ul>
+
             </section>
 
             <section class="links">
                 <h2>Links</h2>
                 <ul>
-                    <li><a href="https://github.com/famousStratum/versicode">Repository</a></li>
+                    <li><a href="https://haritam.com/">Haritam</a></li>
                 </ul>
             </section>
 
