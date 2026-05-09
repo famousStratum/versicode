@@ -341,6 +341,10 @@ body:has(.om-symbol:active) #projects li a {
   animation: card-cycle 3s linear infinite;
 }
 
+body:has(.om-symbol:active) .iframe-preview {
+  animation: card-cycle 6s linear infinite, card-rotate-loop 6s linear infinite;
+}
+
 body:has(.om-symbol:active) #projects li:nth-child(5n+2) a { animation-delay: 0s, 0s, 0s; }
 body:has(.om-symbol:active) #projects li:nth-child(5n+5) a { animation-delay: 0.4s, 0.4s, 0.6s; }
 body:has(.om-symbol:active) #projects li:nth-child(5n+4) a { animation-delay: 0.7s, 0.7s, 1.2s; }
@@ -374,7 +378,7 @@ body:has(.om-symbol:active) #projects ul {
 }
 
 .iframe-preview:hover {
-  transform: scale(2);
+  transform: scale(1.6);
 }
 
 .iframe-preview iframe {
@@ -382,31 +386,12 @@ body:has(.om-symbol:active) #projects ul {
     height: 200%;
     transform: scale(0.5);
     transform-origin: top;
-    pointer-events: none;
     border: none;
 }
 
 .iframe-overlay {
     position: absolute;
     inset: 0;
-    cursor: pointer;
-}
-
-.brand-code {
-  cursor: default;
-}
-
-.text-cursor {
-    color: transparent;
-}
-
-.brand-code:hover .text-cursor {
-    animation: blink 1s step-start infinite;
-}
-
-@keyframes blink {
-    0%, 100% { color: transparent; }
-    50%       { color: var(--color-text); }
 }
 
 @keyframes brandshadow-in {
@@ -487,7 +472,7 @@ body:has(.om-symbol:active) #projects ul {
 
 @keyframes card-rotate-loop {
   0%   { transform: rotate(0turn); }
-  50%  { transform: rotate(0.001turn); }
+  50%  { transform: rotate(0.0012turn); }
   100% { transform: rotate(0turn); }
 } 
 
