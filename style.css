@@ -378,7 +378,7 @@ body:has(.om-symbol:active) #projects ul {
 }
 
 .iframe-preview:hover {
-  transform: scale(1.6);
+  transform: scale(1.9);
 }
 
 .iframe-preview iframe {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 — Versicode</title>
+    <title>404 — versicode</title>
     <link rel="stylesheet" href="/style.css">
     <style>
         #error-section {
@@ -82,6 +82,33 @@
             animation: none;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
         }
+
+        body:has(.om-symbol:active) header {
+            animation: dissolve 2s ease-in forwards;
+        }
+
+        body:has(.om-symbol:active) main {
+            animation: dissolve 2s ease-in 0.2s forwards;
+        }
+
+        body:has(.om-symbol:active) footer {
+            animation: dissolve 2s ease-in 0.4s forwards;
+        }
+
+        body:has(.om-symbol:active) .shadow-layer {
+            animation: brandshadow-in 5s ease-out forwards;
+            animation-delay: calc(var(--i) * 0.08s);
+        }
+
+        @keyframes dissolve {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
@@ -90,7 +117,7 @@
     <header role="banner">
         <nav role="navigation" aria-label="Main site navigation">
             <a href="/" class="brand">versicode</a>
-            <a href="mailto:info@versicode.com">Contact</a>
+            <a href="mailto:info@versicode.com">contact</a>
         </nav>
     </header>
 
@@ -107,10 +134,9 @@
                 404
             </div>
 
-            <p class="error-title">Page not found.</p>
+            <p class="error-title">There's no inner essence for what you're looking for.</p>
             <p class="error-desc">
-                Whatever you were looking for has drifted off into the void —
-                or maybe it was never here to begin with.
+                Step away, appreciate what really matters, and be comfortable with everything as it is.
             </p>
 
             <nav class="error-links" aria-label="Recovery options">
@@ -124,6 +150,7 @@
     </main>
 
     <footer role="contentinfo">
+
         <p class="versicode-container">
             <span class="versicode-text">
                 <span class="shadow-layer layer1">versicode</span>
@@ -131,10 +158,12 @@
                 <span class="shadow-layer layer3">versicode</span>
                 <span class="shadow-layer layer4">versicode</span>
                 <span class="shadow-layer layer5">versicode</span>
-                versicode
-            </span>, code emanating through an
+                <a class="versicode-project" href="/projects/versicode.html">versicode</a> </span>, code emanating
+            through
+            an
             <span class="om-symbol" id="om-trigger" aria-label="Trigger VERSICODE effect">ॐ</span>
         </p>
+
     </footer>
 
 </body>
