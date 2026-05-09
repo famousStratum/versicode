@@ -1,0 +1,216 @@
+/* ─── Brand Code ─── */
+
+.brand-code {
+    font-family: var(--font-mono);
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+#brand-trigger {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ─── Layer base ─── */
+
+.bc-layer {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    opacity: 0;
+    animation: bc-frame 0.05s steps(1, end) forwards;
+    animation-play-state: paused;
+}
+
+.bc-layer-0 {
+    position: relative;
+    opacity: 1;
+}
+
+/* ─── Cursor ─── */
+
+.text-cursor {
+    display: none;
+    margin: 0 -3px;
+}
+
+.brand-code:hover .bc-layer-0 .text-cursor {
+    display: inherit;
+    color: orange;
+    animation: blink 1s step-start infinite;
+}
+
+#brand-trigger:checked ~ nav .text-cursor {
+    display: inline-flex;
+    color: dodgerblue;
+    animation: none
+}
+
+#brand-trigger:checked ~ nav .bc-layer-1 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-2 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-10 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-12 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-15 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-17 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-19 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-24 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-26 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-27 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-30 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-32 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-34 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-35 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-36 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-37 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-38 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-39 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-40 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-41 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-42 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-43 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-51 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-53 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-58 .text-cursor,
+#brand-trigger:checked ~ nav .bc-layer-59 .text-cursor {
+    animation: blink 1s step-start infinite;
+    color: orangered;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50%       { opacity: 1; }
+}
+
+/* ─── Checked state ─── */
+
+#brand-trigger:checked ~ nav .bc-layer-0 {
+    opacity: 0;
+}
+
+#brand-trigger:checked ~ nav .bc-layer {
+    display: inherit;
+    animation-play-state: running;
+}
+
+/* ─── Frame keyframe ─── */
+
+@keyframes bc-frame {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes pause {
+    0%    { opacity: 1; }
+    99.99%   { opacity: 1; }
+    100%  { opacity: 0; }
+}
+
+@keyframes bc-frame-final {
+    0%, 100% { opacity: 1; }
+}
+
+:root {
+    --short-pause: pause 0.2s step-start;
+    --medium-pause: pause 0.5s step-start;
+    --long-pause: pause 1s step-start;
+    --reflect: pause 1.8s step-start;
+  }
+
+/* ─── Layer delays ─── */
+
+/* 1. DELETE "versicode" */
+.bc-layer-1     { animation: var(--medium-pause); animation-delay: 0.00s; }
+.bc-layer-2     { animation: var(--long-pause); animation-delay: 0.50s; }
+.bc-layer-3     { animation-delay: 1.50s; }
+.bc-layer-4     { animation-delay: 1.55s; }
+.bc-layer-5     { animation-delay: 1.60s; }
+.bc-layer-6     { animation-delay: 1.65s; }
+.bc-layer-7     { animation-delay: 1.70s; }
+.bc-layer-8     { animation-delay: 1.75s; }
+.bc-layer-9     { animation-delay: 1.80s; }
+.bc-layer-10    { animation: var(--medium-pause); animation-delay: 1.85s; }
+
+/* 2. TYPE "haritam" (Natural typing) */
+.bc-layer-11    { animation-delay: 2.35s; }
+.bc-layer-12    { animation: var(--short-pause); animation-delay: 2.40s; }
+.bc-layer-13    { animation-delay: 2.60s; }
+.bc-layer-14    { animation-delay: 2.65s; }
+.bc-layer-15    { animation: var(--short-pause); animation-delay: 2.70s; }
+.bc-layer-16    { animation-delay: 2.90s; }
+
+/* 3. PAUSE on "haritam" */
+.bc-layer-17    { animation: var(--long-pause); animation-delay: 2.95s; }
+
+/* 4. DELETE "haritam" */
+.bc-layer-18    { animation-delay: 3.95s; }
+.bc-layer-19    { animation: var(--long-pause); animation-delay: 4.00s; }
+.bc-layer-20    { animation-delay: 5.00s; }
+.bc-layer-21    { animation-delay: 5.05s; }
+.bc-layer-22    { animation-delay: 5.10s; }
+.bc-layer-23    { animation-delay: 5.15s; }
+.bc-layer-24    { animation: var(--medium-pause); animation-delay: 5.20s; }
+
+/* 5. TYPE "be present" */
+.bc-layer-25    { animation-delay: 5.70s; }
+.bc-layer-26    { animation: var(--short-pause); animation-delay: 5.75s; }
+.bc-layer-27    { animation: var(--short-pause); animation-delay: 5.95s; }
+.bc-layer-28    { animation-delay: 6.15s; }
+.bc-layer-29    { animation-delay: 6.20s; }
+.bc-layer-30    { animation: var(--short-pause); animation-delay: 6.25s; }
+.bc-layer-31    { animation-delay: 6.45s; }
+.bc-layer-32    { animation: var(--short-pause); animation-delay: 6.50s; }
+.bc-layer-33    { animation-delay: 6.70s; }
+
+/* 6. PAUSE on "be present" */
+.bc-layer-34    { animation: var(--long-pause); animation-delay: 6.75s; }
+
+/* 7. MOVE CURSOR LEFT (Manual Taps @ 0.2s) */
+.bc-layer-35    { animation: var(--short-pause); animation-delay: 7.75s; }
+.bc-layer-36    { animation: var(--short-pause); animation-delay: 7.95s; }
+.bc-layer-37    { animation: var(--short-pause); animation-delay: 8.15s; }
+.bc-layer-38    { animation: var(--short-pause); animation-delay: 8.35s; }
+.bc-layer-39    { animation: var(--short-pause); animation-delay: 8.55s; }
+.bc-layer-40    { animation: var(--medium-pause); animation-delay: 8.75s; }
+.bc-layer-41    { animation: var(--long-pause); animation-delay: 9.25s; }
+
+/* 8. BACKSPACE TWICE */
+.bc-layer-42    { animation: var(--medium-pause); animation-delay: 10.25s; }
+.bc-layer-43    { animation: var(--long-pause); animation-delay: 10.75s; }
+
+/* 9. TYPE "are you " */
+.bc-layer-44    { animation-delay: 11.75s; }
+.bc-layer-45    { animation-delay: 11.80s; }
+.bc-layer-46    { animation-delay: 11.85s; }
+.bc-layer-47    { animation-delay: 11.90s; }
+.bc-layer-48    { animation-delay: 11.95s; }
+.bc-layer-49    { animation-delay: 12.00s; }
+.bc-layer-50    { animation-delay: 12.05s; }
+.bc-layer-51    { animation: var(--medium-pause); animation-delay: 12.10s; }
+
+/* 10. HOLD RIGHT ARROW */
+.bc-layer-52    { animation-delay: 12.60s; }
+.bc-layer-53    { animation: var(--long-pause); animation-delay: 12.65s; }
+.bc-layer-54    { animation-delay: 13.65s; }
+.bc-layer-55    { animation-delay: 13.70s; }
+.bc-layer-56    { animation-delay: 13.75s; }
+.bc-layer-57    { animation-delay: 13.80s; }
+
+/* 11. PAUSE */
+.bc-layer-58 { animation: var(--reflect); animation-delay: 13.85s; }
+
+/* 12. TYPE "?" */
+.bc-layer-59 {
+    animation-name: bc-frame-final;
+    animation-delay: 15.65s;
+    animation-duration: 9999s;
+    animation-fill-mode: forwards;
+}
+
+#brand-trigger:checked ~ nav .bc-layer-59 {
+    animation-play-state: running;
+}
