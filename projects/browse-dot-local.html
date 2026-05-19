@@ -4,7 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browse .local — versicode</title>
+    <title>Browse.local — versicode</title>
+    <meta name="description"
+        content="An Android app for discovering and browsing mDNS services on your local network — home servers, IoT devices, and self-hosted dashboards." />
+    <link rel="canonical" href="https://versicode.com/projects/browse-dot-local.html" />
+    <meta property="og:title" content="Browse.local — versicode" />
+    <meta property="og:description"
+        content="An Android app for discovering and browsing mDNS services on your local network — home servers, IoT devices, and self-hosted dashboards." />
+    <meta property="og:url" content="https://versicode.com/projects/browse-dot-local.html" />
+    <meta property="og:type" content="website" />
     <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -23,12 +31,27 @@
         <article>
 
             <h1>Browse .local</h1>
-            <p>
+
+            <p class="project-lead">
                 An Android app for discovering and browsing services on your local network.
-                It automatically finds devices advertising over mDNS — home servers, IoT devices,
-                self-hosted dashboards — and lets you open their web interfaces directly within the app.
-                You can also pin frequently used services as home screen shortcuts for quick access.
+                Built for Android 12, where native .local hostname resolution was inconsistently
+                rolled out across devices.
             </p>
+
+            <section class="project-features" aria-label="Key Features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>
+                        <strong>Automatic mDNS Discovery:</strong> Finds devices advertising over mDNS on your local network — home servers, IoT devices, and self-hosted dashboards.
+                    </li>
+                    <li>
+                        <strong>In-App Browsing:</strong> Open discovered services' web interfaces directly within the app.
+                    </li>
+                    <li>
+                        <strong>Home Screen Shortcuts:</strong> Pin frequently used services for quick access.
+                    </li>
+                </ul>
+            </section>
 
             <section class="screenshots">
                 <img src="../assets/browse-local/screenshot-1.png" alt="Browse .local service discovery list">
