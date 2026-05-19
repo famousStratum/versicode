@@ -115,10 +115,10 @@
 }
 
 :root {
-    --short-pause: pause 0.2s step-start;
-    --medium-pause: pause 0.5s step-start;
-    --long-pause: pause 1s step-start;
-    --reflect: pause 1.8s step-start;
+    --short-pause: pause 0.2s step-start forwards;
+    --medium-pause: pause 0.5s step-start forwards;
+    --long-pause: pause 1s step-start forwards;
+    --reflect: pause 1.8s step-start forwards;
   }
 
 /* ─── Layer delays ─── */
