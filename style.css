@@ -92,11 +92,19 @@ header {
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-block: var(--spacing);
   border-top: 1px solid var(--color-border);
   margin-top: auto;
   color: var(--color-muted);
   font-size: 0.875rem;
+}
+
+footer a {
+  color: var(--color-text);
+  font-weight: 600;
 }
 
 /* ─── Nav ─── */
