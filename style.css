@@ -66,6 +66,14 @@ ul {
   list-style: none;
 }
 
+strong {
+  font-weight: 600;
+}
+
+.tooltip:hover {
+  cursor: help;
+}
+
 /* ─── Layout ─── */
 
 header, main, footer {
@@ -156,6 +164,16 @@ p {
   margin-bottom: var(--spacing);
 }
 
+dfn {
+  font-family: var(--font-serif);
+  font-weight: 500;
+}
+
+em {
+  font-family: var(--font-serif);
+  font-weight: 500;
+}
+
 /* ─── Sections ─── */
 
 main section, main article {
@@ -215,6 +233,30 @@ main section, main article {
 }
 
 /* ─── Project detail ─── */
+
+.project-lead {
+  font-size: 1.125rem;
+  color: var(--color-muted);
+  margin-bottom: calc(var(--spacing) * 2);
+}
+
+.project-features {
+  margin-bottom: calc(var(--spacing) * 2);
+}
+
+.project-features ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-left: var(--spacing);
+}
+
+.project-features li::before {
+  content: '› ';
+  color: orangered;
+  font-size: 1.2rem;
+  line-height: 1;
+}
 
 .screenshots {
   display: flex;
