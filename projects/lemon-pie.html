@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LemonPie — versicode</title>
+    <meta name="description"
+        content="A lightweight, portable Ollama CLI client for terminal users — manage chat sessions, persist history, and configure models entirely from the command line." />
+    <link rel="canonical" href="https://versicode.com/projects/lemon-pie.html" />
+    <meta property="og:title" content="LemonPie — versicode" />
+    <meta property="og:description"
+        content="A lightweight, portable Ollama CLI client for terminal users — manage chat sessions, persist history, and configure models entirely from the command line." />
+    <meta property="og:url" content="https://versicode.com/projects/lemon-pie.html" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="icon" type="image/x-icon" href="../public/images/favicon.svg">
+</head>
+
+<body>
+
+    <header role="banner">
+        <nav role="navigation" aria-label="Main site navigation">
+            <a href="/" class="brand">
+                versicode
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+
+            <h1>LemonPie</h1>
+            <p class="project-lead">
+                A compact command-line client for Ollama, built to be tiny and portable — ideal for
+                lightweight systems and terminal users, but usable anywhere with Python and network access.
+                LemonPie manages chat sessions and persists history locally, without getting in the way.
+            </p>
+
+            <section class="project-features" aria-label="Key Features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>
+                        <strong>Session Management:</strong> Start, list, resume, title, and close chat
+                        sessions, with history persisted in your OS's standard user data directory.
+                    </li>
+                    <li>
+                        <strong>Model Aliases:</strong> Add, remove, and list Ollama models under short
+                        aliases via <code>lmConfig</code>, then switch models mid-session with confirmation.
+                    </li>
+                    <li>
+                        <strong>Real-Time Streaming:</strong> Responses stream from Ollama as they're
+                        generated, with graceful handling of Ctrl-C interrupts.
+                    </li>
+                    <li>
+                        <strong>Safe by Default:</strong> Config and session writes are atomic (tmp +
+                        replace), and both directories are overridable via environment variables for
+                        testing or containerized use.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="tech-stack">
+
+                <h2>Tech Stack</h2>
+
+                <ul class="tech-category">
+                    <li data-tech="python">Python</li>
+                    <li data-tech="ollama">Ollama</li>
+                </ul>
+
+                <ul class="tech-category">
+                    <li data-tech="httpx">httpx</li>
+                    <li data-tech="platformdirs">platformdirs</li>
+                </ul>
+
+                <ul class="tech-category">
+                    <li data-tech="hatch">Hatchling</li>
+                    <li data-tech="pytest">pytest</li>
+                </ul>
+
+            </section>
+
+            <section class="links">
+                <h2>Links</h2>
+                <ul>
+                    <li><a href="https://github.com/famousStratum/LemonPie">Repository</a></li>
+                    <li><a href="https://pypi.org/project/lemonpie-cli/">PyPI</a></li>
+                </ul>
+            </section>
+
+        </article>
+    </main>
+
+    <footer role="contentinfo">
+
+        <section class="versicode-container">
+            <span class="versicode-text">
+                <span class="shadow-layer layer1">versicode</span>
+                <span class="shadow-layer layer2">versicode</span>
+                <span class="shadow-layer layer3">versicode</span>
+                <span class="shadow-layer layer4">versicode</span>
+                <span class="shadow-layer layer5">versicode</span>
+                <a class="versicode-project" href="/projects/versicode.html" title="versi- from Latin vertere, to turn, to change, to transform.
+        -code from Latin codex, originally a wooden tablet, now the language of machines.">versicode</a>
+            </span>
+            <span>, code emanating through an</span>
+            <span class="om-symbol" id="om-trigger" aria-label="Trigger VERSICODE effect">ॐ</span>
+        </section>
+        <section>
+            <a href="mailto:info@versicode.com">contact</a>
+        </section>
+    </footer>
+
+</body>
+
+</html>
