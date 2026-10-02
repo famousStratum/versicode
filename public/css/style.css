@@ -16,7 +16,14 @@
   --font-serif:    ui-serif, Georgia, serif;
   --font-mono:     ui-monospace, monospace;
 
-  --width-content: 680px;
+  /* Category colors - still testing */
+  --color-language: dodgerblue;
+  --color-framework: seagreen;
+  --color-ui: orange;
+  --color-data: crimson;
+  --color-visualization: purple;
+
+  --width-content: 720px;
   --spacing:       1rem;
 }
 
@@ -231,6 +238,9 @@ main section, main article {
   color: var(--color-muted);
   font-size: 0.875rem;
   margin-bottom: 0;
+  line-height: 1.25rem;
+  min-height: calc(1.25rem * 2);
+  max-height: calc(1.25rem * 2);
 }
 
 #projects li a:hover,
@@ -314,6 +324,7 @@ main section, main article {
 [data-tech="html"]          { border-left: 3px solid dodgerblue; }
 [data-tech="javascript"]    { border-left: 3px solid dodgerblue; }
 [data-tech="typescript"]    { border-left: 3px solid dodgerblue; }
+[data-tech="python"]        { border-left: 3px solid dodgerblue; }
 [data-tech="react"]         { border-left: 3px solid dodgerblue; }
 [data-tech="nextjs"]        { border-left: 3px solid dodgerblue; }
 
@@ -321,6 +332,7 @@ main section, main article {
 [data-tech="css"]           { border-left: 3px solid orangered; }
 [data-tech="tailwind"]      { border-left: 3px solid orangered; }
 [data-tech="md3"]           { border-left: 3px solid orangered; }
+[data-tech="cli"]           { border-left: 3px solid orangered; }
 [data-tech="no-ui"]         { border-left: 3px solid orangered; }
 
 /* Data Visualization & Mapping */
@@ -328,6 +340,7 @@ main section, main article {
 [data-tech="d3"]            { border-left: 3px solid orange; }
 
 /* Backend & Services */
+[data-tech="ollama"]        { border-left: 3px solid violet; }
 [data-tech="prisma"]        { border-left: 3px solid violet; }
 [data-tech="nextauth"]      { border-left: 3px solid violet; }
 [data-tech="resend"]        { border-left: 3px solid violet; }

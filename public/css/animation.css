@@ -2,10 +2,13 @@
 
 .brand-code {
     font-family: var(--font-mono);
+    font-size: 0.9rem;
     position: relative;
     cursor: pointer;
     white-space: nowrap;
     display: inline-block;
+    isolation: isolate;
+    transform: translateZ(0);
 }
 
 #brand-trigger {
@@ -17,19 +20,36 @@
 /* ─── Layer base ─── */
 
 .bc-layer {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
     white-space: nowrap;
     opacity: 0;
+    pointer-events: none;
     animation: bc-frame 0.05s steps(1, end) forwards;
     animation-play-state: paused;
 }
 
+#brand-trigger:not(:checked) ~ nav .bc-layer {
+    animation: none;
+    opacity: 0;
+}
+
 .bc-layer-0 {
-    position: relative;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
     opacity: 1;
+    pointer-events: none;
+}
+
+/* Sizer element for stable wrapper dimensions */
+.bc-sizer {
+    position: relative;   /* stays in flow, sizes .brand-code */
+    visibility: hidden;
+    pointer-events: none;
+    white-space: nowrap;
 }
 
 /* ─── Cursor ─── */
@@ -93,7 +113,6 @@
 }
 
 #brand-trigger:checked ~ nav .bc-layer {
-    display: inherit;
     animation-play-state: running;
 }
 
