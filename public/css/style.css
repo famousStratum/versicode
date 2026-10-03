@@ -16,12 +16,14 @@
   --font-serif:    ui-serif, Georgia, serif;
   --font-mono:     ui-monospace, monospace;
 
-  /* Category colors - still testing */
+/* 
+  TODO: Tech-stack colors
   --color-language: dodgerblue;
   --color-framework: seagreen;
   --color-ui: orange;
   --color-data: crimson;
-  --color-visualization: purple;
+  --color-visualization: purple; 
+*/
 
   --width-content: 720px;
   --spacing:       1rem;
@@ -315,6 +317,13 @@ main section, main article {
   border-radius: 4px;
 }
 
+/* 
+  TODO: 
+  - Add tech-stack colors 
+  - Improve categories: Languages, Frameworks & Platforms, UI & Styling, Data & Backend, Visualization & Mapping
+  - Consider adding project types, e.g., Web, Mobile, Desktop, CLI, etc.
+*/
+
 /* Mobile Development */
 [data-tech="kotlin"]        { border-left: 3px solid limegreen; }
 [data-tech="android-sdk"]   { border-left: 3px solid limegreen; }
@@ -516,15 +525,15 @@ body:has(.om-symbol:active) #projects ul {
 }
 
 @keyframes card-cycle {
-  0%   { outline: 1px solid orangered;  box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-r-30); }
-  1%   { outline: 1px solid violet;     box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-v-30); }
-  20%  { outline: 1px solid orangered;  box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-r-30); }
-  21%  { outline: 1px solid dodgerblue; box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-b-30); }
-  40%  { outline: 1px solid orangered;  box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-r-30); }
-  41%  { outline: 1px solid limegreen;  box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-g-30); }
-  60%  { outline: 1px solid orangered;  box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-r-30); }
-  61%  { outline: 1px solid orange;     box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-y-30); }
-  100% { outline: 1px solid orangered;  box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-r-30); }
+  0%   { outline: 2px solid orangered;  box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-r-30); }
+  1%   { outline: 2px solid violet;     box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-v-30); }
+  20%  { outline: 2px solid orangered;  box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-r-30); }
+  21%  { outline: 2px solid dodgerblue; box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-b-30); }
+  40%  { outline: 2px solid orangered;  box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-r-30); }
+  41%  { outline: 2px solid limegreen;  box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-g-30); }
+  60%  { outline: 2px solid orangered;  box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-r-30); }
+  61%  { outline: 2px solid orange;     box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-y-30); }
+  100% { outline: 2px solid orangered;  box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 6px 6px 6px var(--accent-r-30); }
 }
 
 @keyframes cards-float-loop {
